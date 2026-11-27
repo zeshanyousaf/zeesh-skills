@@ -13,6 +13,12 @@ Built from a full frame-by-frame analysis of a real Zack D. Films Short ("How A 
 | [zack-d-films-style/channel-breakdown.md](zack-d-films-style/channel-breakdown.md) | The full channel breakdown: history, eras, scale, upload system, his team pipeline, and why the format works |
 | Inside SKILL.md | Two production routes — **Claude + Blender** (his real pipeline, with Claude writing the Blender automation) and **No-Blender AI route** — plus a script skeleton, shot-list template and a ready topic bank |
 
+## Also in this repo
+
+| Skill | What it is |
+|---|---|
+| [threejs-content/SKILL.md](threejs-content/SKILL.md) | Interactive 3D web content with Three.js — product viewers, 3D hero sections, explainer scenes, dioramas and particle backgrounds, delivered as a single HTML file with a working starter template |
+
 ## How to use
 
 1. Copy the `zack-d-films-style` folder into your AI agent's skills directory.
