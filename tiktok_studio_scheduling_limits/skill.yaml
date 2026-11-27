@@ -1,0 +1,26 @@
+name: tiktok_studio_scheduling_limits
+title: TikTok Studio Scheduling Limits
+description: Keep TikTok Studio upload schedules within its 30 pending-post cap and 5-minute time grid when scheduling videos through the browser.
+category: Communication
+include_in_prompt: false
+amends:
+  skill: social_publishing
+  reviewed_revision: 9fa1f4b8e4dc80c78544a40893ea66a2b18f4652f71a973f2bfbca27ee092feb
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - skill_inventory:social_publishing
+  - skill_inventory:tiktok_studio_scheduling_limits
+  - 9fa1f4b8e4dc80c78544a40893ea66a2b18f4652f71a973f2bfbca27ee092feb
+  - evidence_gate:amendment_base_changed
+  - /opt/muse/skills/social-publishing/SKILL.md
+  measurement:
+    proxy_metric_id: tiktok_schedule_block_rate
+    success_criterion: No TikTok scheduling run in the window misses its intended slots or silently retries against the 30-post cap, any full queue is reported to the user with a priority choice in the same run, and every scheduled time lands on the 5-minute grid.
+    window_days: 30
+  rationale: The social_publishing base moved from a9cc7bd6107b581ea36ac74319d4dd6912a0c195ac5dffdc5d25e1c3496adda5 to 9fa1f4b8e4dc80c78544a40893ea66a2b18f4652f71a973f2bfbca27ee092feb. I read the full current base and it still lists TikTok Studio only as a scheduling website and names neither the 30 pending-post cap nor the 5-minute time grid, so the amendment is still needed and only its reviewed_revision is renewed.
+  review_after: 2026-12-24T14:46:58.314802+00:00
+  reviewed_at: 2026-11-24T14:46:58.314802+00:00
+  needs_review: false
+  run_id: sirun_46ff2e8e13884c6daa0dd8dcc940f6b7
