@@ -1,0 +1,22 @@
+name: locked_character_image_edit
+title: Fix a locked character image by editing
+description: Fix a locked character image that text-to-image keeps getting wrong by editing the best reference image, after two failed prompts on the same detail.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - 2026-11-24T17:16:00Z-2026-11-24T18:58:00Z Lupa pink-lips character session
+  - 2026-11-24T17:24:31Z user rebuke in Lupa session
+  - skill_inventory:generated_video_verification
+  - /home/hatch/workspace/custom-skills/generated_video_verification/SKILL.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No character-image session in the window re-prompts the same failing anatomical detail more than twice before switching to a reference edit, and every reference edit names what stays the same and the single change.
+    window_days: 30
+  needs_review: false
+  rationale: 'In the 2026-11-24 Lupa session (17:16 to 18:58Z) text-to-image kept putting a separate mouth inside the pink lips character across repeated prompt rewrites, the user said the character still was not right and that lips kept getting a mouth inside, then rebuked the agent at 17:24:31Z, and the session only recovered when the agent pivoted to editing the original image with one short prompt that kept the pink character exactly the same and made a single change, which preserved the character. No existing skill covers this: skill_search for image generation and character consistency returned only image-search, product shots and advertising, and generated_video_verification covers verifying finished video, not capping image prompt iteration. Locked-character image work recurs across this user''s series, so the same re-prompt loop will recur without a cap and a switch rule. Consolidation was checked across the 12 active learned skills and no merge was justified: sign-in safety, outage fallback and approval cards address distinct triggers with distinct first actions, the TikTok and YouTube limit amendments cover different platforms, and search console scope labeling and campaign budget two-reading verification are different domains. Other window signals need no proposal: the Pilat join is already forbidden by the paid clipping skip-list check, the DASGASD3M budget rule was published 2026-11-24 and is inside its measurement window, the Medium and FATHOMIX sign-out blocks are already covered by agent_browser_signin_safety and the social publishing verification rule, the Amazon KDP gate refusal was correct, and the deterministic handoff-suppression candidates concern objective-loop cadence with no reusable method.'
+  review_after: 2026-12-25T14:30:22.968456+00:00
+  reviewed_at: 2026-11-25T14:30:22.968456+00:00
+  run_id: sirun_40c738d55ed949f682ad8ebb9c542793
