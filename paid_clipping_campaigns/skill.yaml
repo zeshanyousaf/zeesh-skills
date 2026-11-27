@@ -1,0 +1,22 @@
+name: paid_clipping_campaigns
+title: Paid Clipping Campaigns
+description: Join, screen, cut and submit paid per-view clipping campaigns with a verified HD source, a visible facecam and a checked brief.
+category: Media
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No paid clipping run in the window reports a budget spent or left figure or a filling fast alarm from a single reading, every filling fast alarm cites at least two readings that agree, and no superseded budget figure is reused after a correction.
+    window_days: 30
+  evidence_handles:
+  - skill_inventory:paid_clipping_campaigns
+  - 5e89021f-a072-4fde-86e4-d43c9978a929
+  - ~/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md
+  - ~/MEMORY.md
+  needs_review: false
+  rationale: On 2026-11-24 DASGASD3M was reported as $355 of $1,000 used with 70 creators and $645 left with a filling fast warning, then corrected the same day to $261 used with 104 to 105 creators and $739 left, with three readings agreeing on the corrected figure. The skill only requires reading the budget at build time, a single reading, so it could not catch the disagreement. The new section requires two agreeing readings before a filling fast alarm and a same-run correction of a superseded figure.
+  review_after: 2026-12-24T14:46:58.314802+00:00
+  reviewed_at: 2026-11-24T14:46:58.314802+00:00
+  run_id: sirun_46ff2e8e13884c6daa0dd8dcc940f6b7
