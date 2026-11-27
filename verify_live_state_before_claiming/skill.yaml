@@ -1,0 +1,23 @@
+name: verify_live_state_before_claiming
+title: Verify Live State Before Claiming
+description: Check the live account, order or page state before claiming a purchase, ownership, migration or completion is done.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - assistant-msg-52c6949a-b28e-4a02-8c16-3ff77e4089bd
+  - assistant-msg-2e13baa0-5195-4763-935a-619307c17d3c
+  - assistant-msg-eb1e4d0e-d1ec-3292-00d2-a4bb8987358a
+  - assistant-msg-41de04ef-382c-4679-a417-5e7dcce8c198
+  - message:a4d8bfce-1835-4305-bc72-135b48d6e66d
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No run in the window claims a domain, purchase, migration or ownership outcome is complete without a live check in the same run, and every premature claim is corrected in the same run with the superseded claim named.
+    window_days: 30
+  rationale: 'In the 25 to 26 Nov 2026 window the agent made the same error three times in different domains: it prescribed a Zeexy Change of Address and zip upload before checking the live redirect (then corrected itself at assistant-msg-52c6949a-b28e-4a02-8c16-3ff77e4089bd), congratulated the user that patchandplant.com was bought when only a card had been saved (assistant-msg-2e13baa0-5195-4763-935a-619307c17d3c, corrected at assistant-msg-eb1e4d0e-d1ec-3292-00d2-a4bb8987358a), and repeatedly called cozytinyhome.com the user asset before correcting itself after the user challenge (assistant-msg-41de04ef-382c-4679-a417-5e7dcce8c198). Existing coverage is narrow only: search_console_index_reporting covers Search Console figures, generated_video_verification covers video delivery, and paid_clipping_campaigns covers budget figures, and muse.skill_search found no general live-state verification skill. The consolidation review covered all 13 active learned skills and found no defensible merge, so this distinct method is proposed as one new skill rather than an update to a skill inside its measurement window.'
+  needs_review: false
+  review_after: 2026-12-26T14:45:06.474591+00:00
+  reviewed_at: 2026-11-26T14:45:06.474591+00:00
+  run_id: sirun_01fa1548224643f883c046928c1cfc07
