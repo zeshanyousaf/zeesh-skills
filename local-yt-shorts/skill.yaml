@@ -1,0 +1,24 @@
+name: local_yt_shorts
+title: Local yt shorts
+description: Turn a long YouTube video (or local video file) into ~1-minute vertical shorts (1080x1920) with burned-in styled captions, viral titles, post captions, and hashtags. Downloads, transcribes with faster-whisper (word timestamps), scores highlight candidates, renders H.264/AAC vertical clips.
+category: Media
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - skill_inventory:local_yt_shorts
+  - /home/hatch/workspace/custom-skills/local-yt-shorts/SKILL.md
+  - /home/hatch/workspace/custom-skills/paid_clipping_campaigns/SKILL.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No short built with this pipeline is delivered for a paid clipping campaign, and every short delivered with this pipeline passes the 1080x1920, clean decode and burned-in caption check.
+    window_days: 30
+  rationale: 'local_yt_shorts is marked needs_review with no measurement or rationale in its learning metadata, and its SKILL.md is not in the template shape. The substantive gap is a conflict with the paid clipping rule published 2026-11-20: this pipeline downloads up to 720p and scales to 1080x1920, while paid clipping requires a verified 1080p VOD source and forbids upscaled 720p, the exact blur pattern behind the repeated clipping rebuilds. This review keeps the whole working method, restructures it into the template sections, and adds the guardrail that this pipeline must never feed a paid clipping campaign. Consolidation was checked across the 12 active learned skills and no merge was justified: agent_browser_signin_safety and browser_outage_fallback address distinct triggers with distinct first actions, the two Studio amendments cover different platforms with different limits and proxies, and extraction, clipping production and generated-video verification are different work.'
+  review_after: 2026-12-21T14:35:49.184463+00:00
+  reviewed_at: 2026-11-21T14:35:49.184463+00:00
+  needs_review: false
+  run_id: sirun_04523fa6c42549b5b0663fe45b82cd70
