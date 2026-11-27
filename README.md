@@ -23,6 +23,7 @@ Every skill in this repo exists because something was learned the hard way: a mi
 |---|---|
 | [local-yt-shorts](local-yt-shorts/) | Turn a long YouTube video into ~1-minute vertical Shorts with styled captions, titles and hashtags |
 | [recast-agent](recast-agent/) | Rebuild a reference video around your own characters — reference + character locks, every time |
+| [zack-d-films-style](zack-d-films-style/) | Build 3D animated fact shorts in the Zack D. Films format — with a full frame-by-frame reference breakdown |
 | [generated_video_verification](generated_video_verification/) | Verify faces, audio, text, motion and framing on a generated video before delivering it |
 | [locked_character_image_edit](locked_character_image_edit/) | Fix a locked character by editing the image, not re-prompting, after two failed generations |
 | [youtube_studio_unverified_limits](youtube_studio_unverified_limits/) | Stay inside an unverified channel's daily upload and custom-thumbnail limits |
